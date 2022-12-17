@@ -1,5 +1,16 @@
 from transformers import pipeline
 
-sentiment_classifier = pipeline('sentiment-analysis')
+print("imports complete...")
+sentiment_classifier = pipeline('sentiment-analysis', model="distilbert-base-uncased-finetuned-sst-2-english")
 
-sentiment_classifer(["Yay! This is my first transformers snippet!"])
+print( sentiment_classifier(["Yay! This is my first transformers snippet!"]) )
+
+
+import pandas as pd
+import numpy as np
+
+chart_data = pd.DataFrame(
+    np.random.randn(20, 3),
+    columns=["a", "b", "c"])
+
+st.bar_chart(chart_data)
