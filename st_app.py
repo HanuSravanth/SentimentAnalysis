@@ -27,10 +27,10 @@ if submit:
     score = result['score']
     c1, c2, c3 = st.columns([50, 50, 100])
     if label == 'POSITIVE':
-        with c1: st.success(f"Sentiment: {label}")
+        with c1: st.success(f"Sentiment: {label} 😇")
         with c2: st.success(f"Score: {(score * 100):.2f}%")
     else:
-        with c1: st.error(f"Sentiment: {label}")
+        with c1: st.error(f"Sentiment: {label} 😑")
         with c2: st.error(f"Score: {(score * 100):.2f}%")
 
 
